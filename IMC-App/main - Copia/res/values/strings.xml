@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="texto_inf">O proscesso para determinar se
+        voce vai morrer é o imc, ta ligado? Vamos Calcula-lo para você</string>
+    <string name="title_activity_resultado">resultado</string>
+    <string name="resultado">O seu imc é:</string>
+    <string name="nome">Calculadora Saudável</string>
+    <string name="slogan">Sua saúde primeiro</string>
+    <string name="oque">Oque vamos calcular hoje</string>
+    <string name="nessecidade">Nescessidades calóricas diarias</string>
+</resources>
