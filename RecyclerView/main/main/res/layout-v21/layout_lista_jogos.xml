@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android ="http://schemas.android.com/apk/res/android"
+    xmlns:app ="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation ="vertical"
+    android:layout_width ="match_parent"
+    android:layout_height ="205dp"
+    app:cardBackgroundColor ="@android:color/holo_blue_light"
+    android:layout_marginTop ="8dp"
+    android:layout_marginLeft ="8dp"
+    android:layout_marginRight ="8dp"
+    app:cardCornerRadius ="8dp"
+    app:cardElevation ="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+
+            android:id="@+id/image"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:src="@drawable/imgfilme"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNomeFilme"
+            app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Nome Do Filme"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/txtDtLancamento"
+
+            app:layout_constraintTop_toBottomOf="@id/txtNomeFilme"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            android:layout_marginLeft="8dp"
+
+            android:text="26/09/2002"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/notaFilme"
+
+            app:layout_constraintTop_toBottomOf="@id/txtDtLancamento"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+
+            style="?android:attr/ratingBarStyleIndicator"
+
+            android:numStars="5"
+            android:rating="4.5"
+            android:isIndicator="false"
+            android:stepSize="0.5"
+
+            android:scaleY="0.7"
+            android:scaleX="0.7"
+
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDetalhes"
+            android:text="Detalhes"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@android:style/Widget.Material.Button.Borderless"
+            android:textColor="@android:color/white"/>
+            
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
