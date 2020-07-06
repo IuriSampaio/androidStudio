@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">reciclerView</string>
+    <string name="nomeFilme">Nome do Filme</string>
+    <string name="dtLanc">Data Lançamento</string>
+    <string name="dublagem">Empresa de Dublagem</string>
+    <string name="nota">Deslize para dar a nota</string>
+    <string-array name="empresasDublagem">
+        <item>Helbert Richards</item>
+        <item>Unidub</item>
+        <item>Som de vera cruz</item>
+        <item>Gigavoxx</item>
+        <item>Maurício de souza produções</item>
+    </string-array>
+</resources>

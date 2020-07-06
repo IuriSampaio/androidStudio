@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cadastroFilmeActivity">
+
+<include layout="@layout/toolbar"/>
+<RelativeLayout
+    android:id="@+id/ftFilme"
+    android:layout_width="0dp"
+    android:layout_height="240dp"
+    android:layout_marginTop="50dp"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:background="@android:color/holo_blue_dark">
+
+    <ImageView
+        android:id="@+id/imagemFilme"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@android:color/holo_blue_light"
+        android:src="@drawable/ic_photo_black_24dp"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_photo_black_24dp"/>
+</RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ftFilme">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:id="@+id/nomeFilme"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <EditText
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nomeFilme"
+                android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lancamento"
+            app:layout_constraintTop_toBottomOf="@+id/nomeFilme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="8dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dtLanc"
+                android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dublagem"
+            android:textStyle="bold"
+            android:id="@+id/txtDublador"
+            android:textSize="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lancamento"
+            android:layout_marginTop="8dp"/>
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinerDublagem"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDublador"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:entries="@array/empresasDublagem"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nota"
+            android:textStyle="bold"
+            android:id="@+id/txtnota"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinerDublagem"
+            android:layout_marginTop="8dp"/>
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5"
+            android:id="@+id/notaFilme"
+            app:layout_constraintTop_toBottomOf="@id/txtnota"
+            app:layout_constraintRight_toRightOf="parent"
+            style="?android:attr/ratingBarStyleIndicator"
+            tools:ignore="MissingConstraints" />
+        <CheckBox
+            android:id="@+id/checkboxZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txtnota"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Já assistiu?"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
